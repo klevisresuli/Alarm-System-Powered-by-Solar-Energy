@@ -12,8 +12,6 @@ int Motion_Detected = -1, Fire_Detected= -1,counter=0, current_time=0, prev_time
 float Water_Level=-1.00,Gas_Value=-1.00, Temp_Value=-1.00, Humidity_Value=-1.00;
 bool DHT_Alarm=false, Gas_Alarm=false, Water_Alarm=false,Triggered=false;
 void setup() {
-    //CLKPR=0x80;
-    //CLKPR=0x01;
   pinMode(DHTPower, OUTPUT);
   pinMode(GasPower, OUTPUT); 
   pinMode(WaterLevelPower, OUTPUT);
@@ -70,10 +68,6 @@ void loop() {
   BTSerial.println(output_message);
   Serial.println(output_message);
 
- /*for(int i=0;i<15;i++){ 
- LowPower.powerDown(SLEEP_2S, ADC_OFF, BOD_OFF);
-      
-}*/ 
 
 do {
   current_time=millis();
